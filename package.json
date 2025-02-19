@@ -1,0 +1,20 @@
+{
+  "name": "nodenpm",
+  "version": "1.0.0",
+  "description": "hallo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "buka": "dir",
+    "test": "a"
+  },
+  "keywords": [
+    "a"
+  ],
+  "author": "agus",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "validator": "^13.12.0"
+  }
+}
