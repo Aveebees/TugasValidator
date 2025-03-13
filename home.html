@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for Parallax Effect */
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out">
+        <div id="navbar" class="container mx-auto flex justify-between items-center px-6 py-4 bg-transparent transition-all duration-300">
+            <h1 class="text-2xl font-extrabold text-white">About ud</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="/" class="text-gray-200 hover:text-blue-400 transition duration-300">Home</a>
+                <a href="/about" class="text-gray-200 hover:text-blue-400 transition duration-300">About</a>
+                <a href="/contact" class="text-gray-200 hover:text-blue-400 transition duration-300">Kontak</a>
+            </nav>
+            <!-- Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-xl text-white">
+            <a href="/" class="hover:text-blue-400 transition duration-300">Home</a>
+            <a href="/about" class="hover:text-blue-400 transition duration-300">About</a>
+            <a href="/contact" class="hover:text-blue-400 transition duration-300">Kontak</a>
+            <button id="close-menu" class="text-4xl">✖</button>
+        </div>
+    </header>
+
+  <!-- Hero Section with Parallax -->
+  <section class="parallax h-screen flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');">
+    <div class="text-center text-white">
+      <h1 class="text-6xl font-bold animate__animated animate__fadeInDown">Selamat Datang</h1>
+      <p class="mt-4 text-xl animate__animated animate__fadeInUp">Solusi Inovatif untuk Masa Depan Anda</p>
+      <a href="#layanan" class="mt-8 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 animate__animated animate__fadeInUp">Jelajahi Layanan Kami</a>
+    </div>
+  </section>
+
+  <!-- Layanan Section -->
+  <section id="layanan" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800">Layanan Kami</h2>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="text-center animate__animated animate__fadeIn">
+          <div class="bg-blue-100 p-8 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Development" class="w-24 h-24 mx-auto rounded-full">
+            <h3 class="mt-4 text-xl font-semibold">Web Development</h3>
+            <p class="mt-2 text-gray-600">Kami membangun website modern dan responsif untuk bisnis Anda.</p>
+          </div>
+        </div>
+        <div class="text-center animate__animated animate__fadeIn animate__delay-1s">
+          <div class="bg-blue-100 p-8 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mobile App" class="w-24 h-24 mx-auto rounded-full">
+            <h3 class="mt-4 text-xl font-semibold">Mobile App</h3>
+            <p class="mt-2 text-gray-600">Aplikasi mobile berkualitas tinggi untuk iOS dan Android.</p>
+          </div>
+        </div>
+        <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
+          <div class="bg-blue-100 p-8 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="w-24 h-24 mx-auto rounded-full">
+            <h3 class="mt-4 text-xl font-semibold">UI/UX Design</h3>
+            <p class="mt-2 text-gray-600">Desain antarmuka yang menarik dan mudah digunakan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax h-96 flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+    <div class="text-center text-white">
+      <h2 class="text-4xl font-bold">Mari Bangun Masa Depan Bersama</h2>
+      <p class="mt-4 text-xl">Kami siap membantu Anda mencapai tujuan bisnis.</p>
+    </div>
+  </section>
+
+  <!-- Testimoni Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800">Apa Kata Klien Kami?</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+          <p class="text-gray-600">"Pelayanan sangat profesional dan hasilnya memuaskan. Terima kasih!"</p>
+          <div class="mt-4 flex items-center">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Client 1" class="w-12 h-12 rounded-full">
+            <div class="ml-4">
+              <h3 class="font-semibold">John Doe</h3>
+              <p class="text-sm text-gray-500">CEO Perusahaan A</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInRight">
+          <p class="text-gray-600">"Tim sangat responsif dan proyek selesai tepat waktu."</p>
+          <div class="mt-4 flex items-center">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Client 2" class="w-12 h-12 rounded-full">
+            <div class="ml-4">
+              <h3 class="font-semibold">Jane Smith</h3>
+              <p class="text-sm text-gray-500">CTO Perusahaan B</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold">Perusahaan</h3>
+          <p class="mt-4 text-gray-400">Solusi inovatif untuk masa depan yang lebih baik.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Link Cepat</h3>
+          <ul class="mt-4 space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Beranda</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Tentang Kami</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Layanan</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Sosial Media</h3>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+            <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Parallax Effect -->
+  <script>
+    document.addEventListener('scroll', function() {
+      const parallaxSections = document.querySelectorAll('.parallax');
+      parallaxSections.forEach(section => {
+        const scrollPosition = window.pageYOffset;
+        const speed = 0.5;
+        section.style.backgroundPositionY = `${scrollPosition * speed}px`;
+      });
+    });
+    const navbar = document.getElementById("navbar");
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenu = document.getElementById("close-menu");
+
+    // Sticky Navbar Effect
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("bg-black", "bg-opacity-80", "shadow-lg", "backdrop-blur-md");
+        } else {
+            navbar.classList.remove("bg-black", "bg-opacity-80", "shadow-lg", "backdrop-blur-md");
+        }
+    });
+
+    // Mobile Menu Toggle
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+    });
+
+    closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+    
+  </script>
+
+</body>
+</html>
