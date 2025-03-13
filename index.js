@@ -1,18 +1,20 @@
-const validator = require('validator');
-const readline = require('readline-sync');
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
+const contacts = require('./contacts');
 
-const email = readline.question("Masukkan email: ");
-
-const phone = readline.question("Masukkan nomor telp: ");
-
-const isEmailValid = validator.isEmail(email);
-
-const isPhoneValid = validator.isMobilePhone(phone, 'id-ID');
-
-console.log("\nHasil Validasi:");
-console.log(`Email: ${email} -> ${isEmailValid ? 
-    "✅ Benar" :
-    "❌ Tidak Valid"}`);
-console.log(`Nomor Telepon: ${phone} -> ${isPhoneValid ? 
-    "✅ Benar" : 
-    "❌ Tidak Valid"}`);
+yargs(hideBin(process.argv))
+  .command({
+    command: 'add',
+    describe: 'Menambahkan kontak baru',
+    builder: {
+      nama: { describe: 'Nama Lengkap', demandOption: true, type: 'string' },
+      email: { describe: 'Email', demandOption: false, type: 'string' },
+      nohp: { describe: 'Nomor Telepon', demandOption: true, type: 'string' },
+    },
+    handler(argv) {
+      console.log('Menambahkan kontak:', argv.nama, argv.email, argv.nohp);
+      contacts.simpanContact(argv.nama, argv.email, argv.nohp);
+    },
+  })
+  .demandCommand()
+  .parse();
